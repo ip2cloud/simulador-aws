@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+ 	<link rel="shortcut icon" href="img/favicon.ico" />
+
+	<title>AWS Simulator</title>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+    
+	<!-- highcharts -->	
+    <script src="js/highcharts.js"></script>
+	
+    <style type="text/css">
+    body {margin:0px;padding: 0px;background: url(img/longo-prazo.png);}
+     
+    </style>
+
+	<script type="text/javascript">
+	$(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'spline',
+                inverted: true,
+                backgroundColor: '',
+                width: 500,
+                style: {
+                    margin: '0 auto'
+                }
+            },
+            title: {
+                text: 'Comparação entre capacidade e uso'
+            },
+            subtitle: {
+                text: 'Traditional data Center vs Amazon Web Services'
+            },
+            xAxis: {
+                reversed: false,
+                title: {
+                    enabled: true,
+                    text: 'Poder de Processamento'
+                },
+                labels: {
+                    enabled:false
+                },
+                maxPadding: 0.0,
+                showLastLabel: true,
+                min:0
+            },
+            yAxis: {
+                title: {
+                    text: 'tempo'
+                },
+                labels: {
+                    enabled : false
+                },
+                lineWidth: 5,
+                min:0
+            },
+            legend: {
+                enabled: true
+            },
+            tooltip: {
+                headerFormat: '<b>{series.name}</b><br/>',
+                pointFormat: 'Processos:{point.x}<br/>Investimento:{point.y}'
+            },
+            plotOptions: {
+                series: {
+                    animation: {
+                        duration: 17000
+                    }
+                },
+                spline: {
+                    lineWidth: 3,
+                    states: {
+                        hover: {
+                            lineWidth: 5
+                        }
+                    },
+                    marker: {
+                        enabled: false
+                    }
+                }
+            },
+            colors : ['#7fc7ff','#FF0000','#FF9900'],
+            series: [{name: 'Capacidade Planejada',
+data: [[05,00],[05,08],[13,08],[13,20],[20,20],[35,20],[35,25],[35,35],[43,35]]
+                     },{type: 'spline',name: 'Demanda',
+data: [[03,00],[03,05],                [23,15],[26,25],        [35,28],        [45,32],  [46,35]]
+                     },{name: 'AWS',
+data: [[04,00],[04,05],                [24,15],[27,25],        [36,28],        [46,32],  [47,35]]}
+                     ]
+        });
+    });
+    
+
+	</script>    
+
+	</head>
+	<body>
+   
+	<div id="container" style="min-width: 100%; height:500px; margin: 0 auto"></div>
+	</body>
+</html>

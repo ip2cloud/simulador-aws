@@ -1,0 +1,41 @@
+       html { overflow:hidden;}
+        body {background:#231f20; margin:0; padding:0; height:auto;overflow:hidden; }
+        #container {position:absolute;min-width: 100%; height: 580px; margin: 0 auto;top:90px;}
+        
+        .aviso1 {width:auto;height:auto;position: absolute; z-index: 999;right:1%;top:110px;border-radius: 3px; font-family: Tahoma; font-size: 13px;padding:8px 8px 8px 30px; box-shadow: 1px 1px 3px #c3c3c3;background:url(../img/aviso-vel-maxima.png) left center no-repeat #FF0000;color:#FFF;display:none;}
+        .aviso2 {width:auto;height:auto;position: absolute; z-index: 999;right:1%;top:110px;border-radius: 3px; font-family: Tahoma; font-size: 13px;padding:8px 8px 8px 30px; box-shadow: 1px 1px 3px #c3c3c3;background:url(../img/aviso-vel-minima.png) left center no-repeat #fee011;color:#000;display:none;}
+
+        .dia {width:317px;height:328px;position: absolute; z-index: 999;left:0px;top:0px;border-radius: 3px; font-family: Tahoma; font-size: 13px;color:#000;display:none;background: url(../img/sol.png);}
+
+        .noite {width:317px;height:328px;position: absolute; z-index: 999;left:0px;top:0px;border-radius: 3px; font-family: Tahoma; font-size: 13px;color:#000;display:none;background: url(../img/lua.png);}
+        
+        .github{position: absolute; top: 0; left: 0; border: 0;z-index: 9990;}
+        
+        .simulador {
+            color:#FFF;
+            border:1px solid #FFF;
+            font-family: Tahoma;
+            font-size: 18px;
+            position: absolute;
+            width: auto;
+            top:630px;
+            height: auto;
+            padding: 4px;
+            left: 50px;
+            text-align: left;
+            z-index: 999;
+            border-radius: 3px;
+            background: 
+        }
+            .simulador button {
+                position:relative;
+                top:0px;
+                padding:4px;
+            }
+        div#longo_prazo { position: absolute;top:20%;left:10%; z-index: 9999;width: 500px; height: 500px;box-shadow: 2px 2px 2px #c3c3c3;}
+        div#longo_prazo iframe {width: 500px; height: 500px;border:0;}
+        .cabecalho {width: 100%;height: 90px;position: absolute;}
+        .cabecalho .logo-global {float: left;background: url(../img/logo-global.png);left: 120px;position: relative;width: 94px;height: 83px;display: block;}
+        .cabecalho .titulo {font-size: 38px;color: #FFF; text-shadow:2px 2px 2px #c3c3c3; font-family: Tahoma; position: relative;top:26px; left:20%;}
+        .cabecalho .logo-aws {float: right;background: url(../img/logo-aws.png);top:-35px;position: relative;width: 229px;height: 87px;display: block;}
+           
